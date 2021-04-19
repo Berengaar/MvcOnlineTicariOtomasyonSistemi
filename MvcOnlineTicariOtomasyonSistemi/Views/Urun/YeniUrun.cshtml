@@ -1,0 +1,37 @@
+﻿@model MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar.Urun
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Ürün Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(u => u.UrunAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(u => u.Kategori)
+    @Html.DropDownListFor(u => u.KategoriId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @*@Html.TextBoxFor(u => u.KategoriId, new { @class = "form-control" })*@
+    <br />
+    @Html.LabelFor(u => u.Marka)
+    @Html.TextBoxFor(u => u.Marka, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(u => u.Stok) @Html.Label(" adedi")
+    @Html.TextBoxFor(u => u.Stok, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alış Fiyatı")
+    @Html.TextBoxFor(u => u.AlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Satış Fiyatı")
+    @Html.TextBoxFor(u => u.SatisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Görsel Yükleyiniz")
+    @Html.TextBoxFor(u => u.UrunGorsel, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ürünü Kaydet</button>
+</form>
+
+
+

@@ -1,0 +1,33 @@
+﻿@model MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Fatura Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Fatura Seri No")
+    @Html.TextBoxFor(f => f.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fatura Sıra No")
+    @Html.TextBoxFor(f => f.FaturaSıraNo, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(f => f.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Saat")
+    @Html.TextBoxFor(f => f.Saat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Vergi Dairesi")
+    @Html.TextBoxFor(f => f.VergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Eden")
+    @Html.TextBoxFor(f => f.TeslimEden, new { @class = "form-control" })
+    <br />
+    @Html.Label("Teslim Alan")
+    @Html.TextBoxFor(f => f.TeslimAlan, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

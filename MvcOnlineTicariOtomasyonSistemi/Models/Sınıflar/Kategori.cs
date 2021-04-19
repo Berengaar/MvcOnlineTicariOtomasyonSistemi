@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar
+{
+    public class Kategori
+    {
+        [Key]   //Üzerinde bulunduğu property'i birincil anahtar yapar.
+        public int KategoriId { get; set; }
+
+        [Column(TypeName = "VarChar")]
+        [StringLength(30)]
+        public string KategoriAd { get; set; }
+        public ICollection<Urun> Uruns { get; set; }    //Veri tabanında "s" takısı alarak yazılır(Ploral raise)
+        //Her bir kategoride birden fazla ürün yer alabilir
+    }
+}

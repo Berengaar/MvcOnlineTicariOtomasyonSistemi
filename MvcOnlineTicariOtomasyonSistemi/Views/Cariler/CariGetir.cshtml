@@ -1,0 +1,37 @@
+﻿@model MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar.Cariler
+
+@{
+    ViewBag.Title = "CariGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Cari Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("CariGuncelle", "Cariler", FormMethod.Post))
+{
+<div class="form-group">
+
+
+    @Html.Label("Cari Adı")
+    @Html.TextBoxFor(c => c.CariAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.CariAd, "", new { @style = "color:orange" })
+    <br />
+
+    @Html.Label("Cari Soyadı")
+    @Html.TextBoxFor(c => c.CariSoyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.CariSoyad, "", new { @style = "color:orange" })
+    <br />
+    @Html.Label("Cari Şehri")
+    @Html.TextBoxFor(c => c.CariSehir, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.CariSehir, "", new { @style = "color:orange" })
+    <br />
+    @Html.Label("Cari Mail")
+    @Html.TextBoxFor(c => c.CariMail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.CariMail, "", new { @style = "color:orange" })
+    <br />
+    @Html.HiddenFor(c => c.CariId)
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</div>
+}
+

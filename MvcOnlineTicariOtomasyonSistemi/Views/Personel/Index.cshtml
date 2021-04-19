@@ -1,0 +1,37 @@
+﻿@using MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Personeller</h2>
+<br />
+<table class="table table-bordered">
+    <tr class="bg-dark">
+        <th style="text-align:center;color:aliceblue">ID</th>
+        <th style="text-align:center;color:aliceblue">PERSONEL ADI</th>
+        <th style="text-align: center;color: aliceblue">PERSONEL SOYADI</th>
+        <th style="text-align: center;color: aliceblue">PERSONEL GÖRSELİ</th>
+        <th style="text-align: center;color: aliceblue">DEPARTMAN</th>
+        <th style="text-align: center;color: aliceblue">SİLME</th>
+        <th style="text-align:center;color:aliceblue">GÜNCELLEME</th>
+        <th style="text-align:center;color:aliceblue">DETAYLAR</th>
+    </tr>
+    @foreach (var personel in Model)
+    {
+        <tr>
+            <td style="text-align:center">@personel.PersonelId</td>
+            <td style="text-align:center">@personel.PersonelAd</td>
+            <td style="text-align:center">@personel.PersonelSoyad</td>
+            <td style="text-align:center">@personel.PersonelGorsel</td>
+            <td style="text-align:center">@personel.Departman.DepartmanAd</td>
+            <td style="text-align:center"><a href="/Personel/PersonelSil/@personel.PersonelId" class="btn btn-danger">Sil</a></td>
+            <td style="text-align:center"><a href="/Personel/PersonelGetir/@personel.PersonelId" class="btn btn-success">Güncelle</a></td>
+            <td style="text-align:center"><a href="/Departman/DepartmanPersonelSatis/@personel.PersonelId" class="btn btn-success">Detaylar</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Personel/YeniPersonel" class="btn btn-primary">Personel Ekle</a>
+

@@ -1,0 +1,27 @@
+﻿@model MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar.FaturaKalem
+@{
+    ViewBag.Title = "FaturaKalemGirisi";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Kalem Girişi</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.Label("Ürün")
+    @Html.TextBoxFor(fk => fk.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.Label("Miktar")
+    @Html.TextBoxFor(fk => fk.Miktar, new { @class = "form-control" })
+    <br />
+    @Html.Label("Birim Fiyat")
+    @Html.TextBoxFor(fk => fk.BirimFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tutar")
+    @Html.TextBoxFor(fk => fk.Tutar, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fatura ID")
+    @Html.TextBoxFor(fk => fk.FaturaId, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>

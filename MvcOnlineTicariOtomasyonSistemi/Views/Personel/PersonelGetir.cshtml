@@ -1,0 +1,30 @@
+﻿@model MvcOnlineTicariOtomasyonSistemi.Models.Sınıflar.Personel
+
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Personel Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    @Html.HiddenFor(p => p.PersonelId)
+    @Html.HiddenFor(p => p.Durum)
+
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(p => p.PersonelAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Soyadı")
+    @Html.TextBoxFor(p => p.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Görseli")
+    @Html.TextBoxFor(p => p.PersonelGorsel, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Personel Departmanı")
+    @Html.DropDownListFor(p => p.DepartmanId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Personeli Kaydet</button>
+}
+
