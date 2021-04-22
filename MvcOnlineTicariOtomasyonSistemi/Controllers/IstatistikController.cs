@@ -72,5 +72,17 @@ namespace MvcOnlineTicariOtomasyonSistemi.Controllers
             
             return View();
         }
+
+        public ActionResult KolayTablolar()
+        {
+            var sorgu = from x in context.Carilers
+                        group x by x.CariSehir into g
+                        select new SinifGrup
+                        {
+                            Sehir = g.Key,
+                            Sayi = g.Count()
+                        };
+            return View(sorgu.ToList());
+        }
     }
 }
