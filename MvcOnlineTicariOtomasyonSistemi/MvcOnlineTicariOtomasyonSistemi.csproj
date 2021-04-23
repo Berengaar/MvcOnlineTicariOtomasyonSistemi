@@ -140,6 +140,7 @@
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Controllers\UrunDetayController.cs" />
+    <Compile Include="Controllers\YapilacakController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,7 +158,10 @@
     <Compile Include="Models\Sınıflar\Personel.cs" />
     <Compile Include="Models\Sınıflar\SatisHareket.cs" />
     <Compile Include="Models\Sınıflar\SinifGrup.cs" />
+    <Compile Include="Models\Sınıflar\SinifGrup2.cs" />
+    <Compile Include="Models\Sınıflar\SinifGrup3.cs" />
     <Compile Include="Models\Sınıflar\Urun.cs" />
+    <Compile Include="Models\Sınıflar\Yapilacak.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2493,6 +2497,7 @@
     <Content Include="thumber\js\swiper.min.js" />
     <Content Include="thumber\js\typed.js" />
     <Content Include="thumber\photos.html" />
+    <Content Include="Views\Shared\favicon.ico" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
@@ -3216,6 +3221,12 @@
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\UrunDetay\Index.cshtml" />
     <Content Include="Views\Istatistik\KolayTablolar.cshtml" />
+    <Content Include="Views\Istatistik\Partial1.cshtml" />
+    <Content Include="Views\Istatistik\Partial2.cshtml" />
+    <Content Include="Views\Istatistik\Partial3.cshtml" />
+    <Content Include="Views\Istatistik\Partial4.cshtml" />
+    <Content Include="Views\Personel\PersonelListe.cshtml" />
+    <Content Include="Views\Yapilacak\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
